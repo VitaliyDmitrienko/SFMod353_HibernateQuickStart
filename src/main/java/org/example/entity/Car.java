@@ -3,9 +3,10 @@ package org.example.entity;
 //import jakarta.persistence.*;
 import jdk.jfr.DataAmount;
 import lombok.Data;
-import org.hibernate.annotations.Entity;
+//import org.hibernate.annotations.Entity;
 //import org.hibernate.annotations.Table;
 
+import javax.persistence.Entity;
 import javax.persistence.Column;
 import javax.persistence.Table;
 import javax.persistence.GeneratedValue;

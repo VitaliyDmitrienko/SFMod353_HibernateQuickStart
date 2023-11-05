@@ -17,14 +17,15 @@ public class App
         car.setModel("Model Turbo");
 
         session.save(car);
-        session.beginTransaction().commit();
+        session.getTransaction().commit();
         session.close();
 
         session = HibernateUtils.getSessionFactory().openSession();
         session.beginTransaction();
-        Car existedCar = session.get(Car.class,1);
+        Car existedCar = session.get(Car.class,1L);
 
         System.out.println(existedCar != null);
+        System.out.println(existedCar);
         session.getTransaction().commit();
         session.close();
 
